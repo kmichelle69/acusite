@@ -10,21 +10,14 @@ def index(request):
 
 
 def symptoms(request):
+    # this is my form handler for symptoms.html
+    # yes
 
-    # add_symptoms = []
-    #
-    # if request.POST:
-    #     if request.POST.getlist('symptom'):
-    #         user.symptom = True
-    #     else:
-    #         user.symptom = False
 
-        template = loader.get_template('acu/symptoms.html')
-        # context = {
-        #     'add symptoms': add_symptoms,
-        # }
+    template = loader.get_template('acu/symptoms.html')
 
-        return HttpResponse(template.render(request))
+
+    return render(request, 'acu/symptoms.html')
 
 
 
